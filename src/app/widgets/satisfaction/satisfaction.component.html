@@ -1,0 +1,19 @@
+<app-card title="Satisfaction Rate">
+  <div class="content">
+    <p>From all products</p>
+    <div class="mask">
+        <div class="icon">
+            <img src="../../../assets/icons/tag_faces.png" alt="likes">
+        </div>
+      <div class="circle" [ngStyle]="{'transform':rotateStyle}"></div>
+    </div>
+    <div class="result-card">
+      <div class="data">
+        <p>0%</p>
+        <p class="score">{{rate}}%</p>
+        <p>100%</p>
+      </div>
+      <p>Based on likes</p>
+    </div>
+  </div>
+</app-card>

@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/styles/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-image: url("/assets/images/wp96499301.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+main {
+  padding: 40px;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  color : $color-text-gray
+}

@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.card-content {
+  color: $color-text-gray;
+  position: relative;
+}
+
+.username {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.background {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.link {
+    color: white;
+    margin-top: 140px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+<app-card title="Product List">
+    <div>
+        <p>See Your Stock</p>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products" [ngClass]="product.quantity < 100 ? 'alert' : null ">
+                    <td>{{product.name}}</td>
+                    <td>{{product.prices}}</td>
+                    <td>{{product.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</app-card>

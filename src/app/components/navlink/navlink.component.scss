@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.navlink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background: $color-secondary;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+
+
+  .active {
+    background: $color-secondary;
+    & .icon {
+        background: $color-primary;
+    }
+  }

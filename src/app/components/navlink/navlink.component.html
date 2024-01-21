@@ -1,0 +1,13 @@
+<a
+  routerLink="{{ link.path }}"
+  routerLinkActive="active"
+  ariaCurrentWhenActive="page"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="navlink"
+>
+  <div class="icon">
+    <img src="{{ link.imageUrl }}" alt="{{ link.title }}" />
+  </div>
+
+  <span class="title">{{ link.title }}</span>
+</a>
