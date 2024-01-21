@@ -1,0 +1,37 @@
+<app-card title="Orders Manager">
+  <div>
+    <p class="subtitle">List of last orders</p>
+    <table>
+      <thead>
+        <th>Reference</th>
+        <th>Date</th>
+        <th>Username</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>
+            {{ order.id }}
+          </td>
+          <td>
+            {{ order.date }}
+          </td>
+          <td>
+            {{ order.user }}
+          </td>
+          <td>
+            {{ order.amount }}
+          </td>
+
+          <td>
+            <div *ngIf="order.status === 'new'" class="new">NEW</div>
+            <div *ngIf="order.status === 'send'" class="send">
+              <img src="../../../assets/icons/delivery.png" alt="delivery" />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-card>

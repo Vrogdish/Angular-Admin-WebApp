@@ -6,6 +6,9 @@ import { WelcomeComponent } from '../../widgets/welcome/welcome.component';
 import { SatisfactionComponent } from '../../widgets/satisfaction/satisfaction.component';
 import { TotalUsersComponent } from '../../widgets/total-users/total-users.component';
 import { ProductListComponent } from '../../widgets/product-list/product-list.component';
+import { TodaysOrdersComponent } from '../../widgets/todays-orders/todays-orders.component';
+import { LastUsersComponent } from '../../widgets/last-users/last-users.component';
+import { OrdersListComponent } from '../../widgets/orders-list/orders-list.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +20,10 @@ import { ProductListComponent } from '../../widgets/product-list/product-list.co
     WelcomeComponent,
     SatisfactionComponent,
     TotalUsersComponent,
-    ProductListComponent
+    ProductListComponent,
+    TodaysOrdersComponent,
+    LastUsersComponent,
+    OrdersListComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -10,14 +10,11 @@ import { SmallCardComponent } from '../../components/small-card/small-card.compo
   styleUrl: './todays-money.component.scss',
 })
 export class TodaysMoneyComponent {
-  amount = 53000;
-  balance = 55;
-
   content = {
     title: "Today's Money",
     imageUrl: '../../../assets/icons/money.png',
     path: '',
   };
 
-  data = {amount : "53000 €",balance :"+55%"}
+  data = {amount : "1200 €",balance :"+55%"}
 }

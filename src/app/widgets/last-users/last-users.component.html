@@ -1,0 +1,15 @@
+<app-card title="Last Subscriptions">
+  <div class="card-content">
+    <p class="subtitle">The fours last</p>
+
+    <ul>
+      <li *ngFor="let user of users">
+        <img src="{{ user.imageUrl }}" alt="{{ user.username }}" />
+        <p>{{ user.username }}</p>
+        <p *ngIf="user.duration > 1">{{ user.duration }} days</p>
+        <p *ngIf="user.duration === 1">{{ user.duration }} day</p>
+        <p *ngIf="user.duration === 0">today</p>
+      </li>
+    </ul>
+  </div>
+</app-card>

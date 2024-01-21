@@ -11,5 +11,14 @@
 .grid {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 320px 400px;
+}
+
+.products  {
+    grid-column: 0/2 ;
+}
+
+.orders {
+    grid-column: 2/4
 }

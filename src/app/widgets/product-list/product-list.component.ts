@@ -13,17 +13,17 @@ export class ProductListComponent {
 products = [
   {
     name : "produit n°1",
-    prices : 10,
+    prices : "10,00 €",
     quantity : 56
   },
   {
     name : "produit n°2",
-    prices : 8.5,
+    prices : "8,50 €",
     quantity : 412
   },
   {
     name : "produit n°3",
-    prices : 12,
+    prices : "12,00 €",
     quantity : 878
   },
 ]

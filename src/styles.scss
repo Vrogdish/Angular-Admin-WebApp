@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 a {
@@ -23,7 +24,9 @@ body {
 
 main {
   padding: 40px;
-  height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  min-height: 100vh;
 }
 
 h2 {
