@@ -1,0 +1,53 @@
+[
+    {
+        "id" : "1",
+        "firstname" : "Cédric",
+        "lastname" : "Gache",
+        "imageUrl" : "",
+        "email" : "gachecedric@exemple.com",
+        "adress" : "adress here",
+        "postalCode" : "34000",
+        "city" : "Montellier",
+        "country" : "France",
+        "createdAt" : ""
+    },
+    {
+        "id" : "2",
+        "firstname" : "Paul",
+        "lastname" : "Doe",
+        "imageUrl" : "",
+        "email" : "Doe@exemple.com",
+        "adress" : "adress here",
+        "postalCode" : "34000",
+        "city" : "Montellier",
+        "country" : "France",
+        "createdAt" : ""
+
+    },
+    {
+        "id" : "3",
+        "firstname" : "Marie",
+        "lastname" : "Doe",
+        "imageUrl" : "",
+        "email" : "Doe@exemple.com",
+        "adress" : "adress here",
+        "postalCode" : "34000",
+        "city" : "Montellier",
+        "country" : "France",
+        "createdAt" : ""
+
+    },
+    {
+        "id" : "4",
+        "firstname" : "Alice",
+        "lastname" : "Doe",
+        "imageUrl" : "",
+        "email" : "Doe@exemple.com",
+        "adress" : "adress here",
+        "postalCode" : "34000",
+        "city" : "Montellier",
+        "country" : "France",
+        "createdAt" : ""
+
+    }
+]

@@ -9,6 +9,7 @@ import { ProductListComponent } from '../../widgets/product-list/product-list.co
 import { TodaysOrdersComponent } from '../../widgets/todays-orders/todays-orders.component';
 import { LastUsersComponent } from '../../widgets/last-users/last-users.component';
 import { OrdersListComponent } from '../../widgets/orders-list/orders-list.component';
+import { LastCommentsComponent } from '../../widgets/last-comments/last-comments.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ import { OrdersListComponent } from '../../widgets/orders-list/orders-list.compo
     ProductListComponent,
     TodaysOrdersComponent,
     LastUsersComponent,
-    OrdersListComponent
+    OrdersListComponent,
+    LastCommentsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -1,37 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { Order } from '../../models/order';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-orders-list',
   standalone: true,
-  imports: [CardComponent,CommonModule],
+  imports: [CardComponent,CommonModule, RouterLink],
   templateUrl: './orders-list.component.html',
   styleUrl: './orders-list.component.scss'
 })
-export class OrdersListComponent {
+export class OrdersListComponent implements OnInit{
+orders! : Order[]
 
-  orders = [
+
+  ngOnInit(): void {
+        this.orders = [
     {
       id : "4587",
-      date : "20/01/2024",
+      date : new Date(),
       user : "Cédric",
-      amount : "158,00 €",
+      amount : 158,
       status : "new",
     },
     {
       id : "7222",
-      date : "18/01/2024",
+      date : new Date(),
       user : "Paul",
-      amount : "32,00 €",
+      amount : 32,
       status : "new",
     },   {
       id : "1587",
-      date : "17/01/2024",
+      date : new Date(),
       user : "Marie",
-      amount : "89,00 €",
+      amount : 89,
       status : "send",
     }
   ]
-
+  }
 }

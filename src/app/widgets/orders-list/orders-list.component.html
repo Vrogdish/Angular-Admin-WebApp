@@ -6,8 +6,8 @@
         <th>Reference</th>
         <th>Date</th>
         <th>Username</th>
-        <th>Amount</th>
-        <th>Status</th>
+        <th class="center">Amount</th>
+        <th class="center">Status</th>
       </thead>
       <tbody>
         <tr *ngFor="let order of orders">
@@ -15,17 +15,17 @@
             {{ order.id }}
           </td>
           <td>
-            {{ order.date }}
+            {{ order.date | date : "dd/MM/yyyy" }}
           </td>
           <td>
             {{ order.user }}
           </td>
-          <td>
-            {{ order.amount }}
+          <td class="center">
+            {{ order.amount | currency : 'EUR' }}
           </td>
 
-          <td>
-            <div *ngIf="order.status === 'new'" class="new">NEW</div>
+          <td class="center">
+            <a routerLink="/orders" *ngIf="order.status === 'new'" class="new">NEW</a>
             <div *ngIf="order.status === 'send'" class="send">
               <img src="../../../assets/icons/delivery.png" alt="delivery" />
             </div>

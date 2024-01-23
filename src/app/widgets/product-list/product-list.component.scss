@@ -5,6 +5,16 @@ p, thead {
     text-align: left;
 }
 
+.center {
+    text-align: center;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
 table {
     margin: 20px 0 ;
     width: 100%;
@@ -19,7 +29,7 @@ th {
     padding: 20px 0;
 }
 
-.alert {
+.alert, .info {
     color : rgb(255, 52, 52);
     font-weight: 700;
     

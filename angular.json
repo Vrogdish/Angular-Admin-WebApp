@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular_admin_webapp": {
+      "i18n": {
+        "sourceLocale":"fr"
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
