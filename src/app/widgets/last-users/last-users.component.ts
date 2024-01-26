@@ -20,7 +20,7 @@ export class LastUsersComponent implements OnInit {
 
   ngOnInit(): void {
       this.users$ = this.userService.getUsers().pipe(
-        map(data => data.sort((a,b)=>b.createdAt.getDate() - a.createdAt.getDate())),
+        map(data => data.sort((a,b)=>b.createdAt.getTime() - a.createdAt.getTime())),
       )
   }
 }

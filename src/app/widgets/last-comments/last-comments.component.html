@@ -1,1 +1,35 @@
-<app-card title="Last Comments"></app-card>
+<app-card title="Last Comments">
+  <div *ngIf="comments$ | async as comments">
+    <p>the fours last comments</p>
+    <table>
+      <thead>
+        <th>Photo</th>
+        <th>Firstname</th>
+        <th>Date</th>
+        <th>Comment</th>
+        <th>Rating</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comment of comments">
+          <td>
+            <img src="{{ getUserImage(comment) | async }}" alt="profil" />
+          </td>
+          <td>{{ getUsername(comment) | async }}</td>
+          <td>{{ comment.createdAt | date }}</td>
+          <td>{{ comment.comment }}</td>
+          <td>
+            <img class="star"
+              *ngFor="let rate of rating"
+              src="{{
+                rate < comment.rate
+                  ? '../assets/icons/star-yellow.png'
+                  : '../assets/icons/star-gray.png'
+              }}"
+              alt="stars"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-card>

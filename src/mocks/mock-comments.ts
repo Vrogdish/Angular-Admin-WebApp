@@ -4,29 +4,29 @@ export const comments : Comment [] = [
     {
         id: "0",
         userId: "1",
-        rate: 4,
+        rate: 5,
         comment: "livraison rapide ! merci",
-        createdAt: new Date("2022-10-31T09:00:00Z")
+        createdAt: new Date("2024-01-24")
     },
     {
         id: "1",
-        userId: "0",
-        rate: 4,
+        userId: "3",
+        rate: 5,
         comment: "Je recommande ce site !!!",
-        createdAt: new Date("2022-10-31T09:00:00Z")
+        createdAt: new Date("2023-12-22")
     },
     {
         id: "2",
         userId: "2",
         rate: 4,
         comment: "ma commande est bien conforme",
-        createdAt: new Date("2022-10-31T09:00:00Z")
+        createdAt: new Date("2024-01-02")
     },
     {
         id: "3",
         userId: "4",
-        rate: 5,
+        rate: 4,
         comment: "Le livreur s'est trompé d'adresse ...",
-        createdAt: new Date("2022-10-31T09:00:00Z")
+        createdAt: new Date("2023-12-26")
     }
 ]
