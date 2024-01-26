@@ -1,7 +1,11 @@
 export interface Order {
     id : string
-    date : Date,
-    user : string,
+    createdAt : Date,
+    userID : string,
+    cart : {
+        productId : string
+        quantity : number
+    }[]
     amount : number,
     status : "new" | "running" |"send",
 }

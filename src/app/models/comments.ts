@@ -3,4 +3,5 @@ export interface Comment {
     userId : string
     rate : number
     comment : string
+    createdAt : Date
 }

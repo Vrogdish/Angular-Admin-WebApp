@@ -8,4 +8,5 @@ export interface User {
     postalCode : string
     city : string
     country : string
+    createdAt : Date
 }

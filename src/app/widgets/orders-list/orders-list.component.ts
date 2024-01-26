@@ -3,6 +3,10 @@ import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
 import { Order } from '../../models/order';
 import { RouterLink } from '@angular/router';
+import { Observable, map } from 'rxjs';
+import { OrdersService } from '../../services/orders.service';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-orders-list',
@@ -12,31 +16,23 @@ import { RouterLink } from '@angular/router';
   styleUrl: './orders-list.component.scss'
 })
 export class OrdersListComponent implements OnInit{
-orders! : Order[]
+
+orders$ ! : Observable<Order[]>
+
+constructor (private ordersService : OrdersService, private usersService : UserService) {}
 
 
   ngOnInit(): void {
-        this.orders = [
-    {
-      id : "4587",
-      date : new Date(),
-      user : "Cédric",
-      amount : 158,
-      status : "new",
-    },
-    {
-      id : "7222",
-      date : new Date(),
-      user : "Paul",
-      amount : 32,
-      status : "new",
-    },   {
-      id : "1587",
-      date : new Date(),
-      user : "Marie",
-      amount : 89,
-      status : "send",
-    }
-  ]
+  this.orders$ = this.ordersService.getOrders().pipe(
+    map(data => data.sort((a,b)=>b.createdAt.getDate() - a.createdAt.getDate()))
+  )
+  }
+
+  getUser (order : Order) : Observable<string | undefined> {
+    return this.usersService.getUsers().pipe(
+      map(data => data.find(value => value.id === order.userID)),
+      map(value => value?.firstname)
+    
+    )
   }
 }

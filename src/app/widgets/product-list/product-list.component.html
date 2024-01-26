@@ -4,7 +4,7 @@
         <p>See Your Stock</p>
         <p class="info">* Less than 100 </p>
     </div>
-        <table>
+        <table *ngIf="products$ | async as products">
             <thead>
                 <th>Name</th>
                 <th class="center">Price</th>

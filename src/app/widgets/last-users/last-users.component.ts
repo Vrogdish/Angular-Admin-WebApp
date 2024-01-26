@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { Observable, map } from 'rxjs';
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-last-users',
@@ -9,27 +12,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './last-users.component.html',
   styleUrl: './last-users.component.scss',
 })
-export class LastUsersComponent {
-  users = [
-    {
-      username: 'Cédric',
-      imageUrl: '../../../assets/profils-exemples/profile.png',
-      duration: 0,
-    },
-    {
-      username: 'Paul',
-      imageUrl: '../../../assets/profils-exemples/profile.png',
-      duration: 1,
-    },
-    {
-      username: 'Marie',
-      imageUrl: '../../../assets/profils-exemples/profile.png',
-      duration: 1,
-    },
-    {
-      username: 'Alice',
-      imageUrl: '../../../assets/profils-exemples/profile.png',
-      duration: 3,
-    },
-  ];
+export class LastUsersComponent implements OnInit {
+
+  users$ ! :Observable<User[]>
+
+  constructor(private userService : UserService) {}
+
+  ngOnInit(): void {
+      this.users$ = this.userService.getUsers().pipe(
+        map(data => data.sort((a,b)=>b.createdAt.getDate() - a.createdAt.getDate())),
+      )
+  }
 }

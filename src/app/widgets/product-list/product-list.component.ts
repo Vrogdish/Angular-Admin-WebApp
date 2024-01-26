@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { Products } from '../../models/product';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -12,37 +13,13 @@ import { Products } from '../../models/product';
   styleUrl: './product-list.component.scss',
 })
 export class ProductListComponent implements OnInit {
-  products!: Products[];
+  products$ ! : Observable<Products[]>
+
+  constructor(private productService : ProductsService) {}
 
   ngOnInit(): void {
-    this.products = [
-      {
-        id: '0',
-        name: 'produit n°1',
-        description: '',
-        category: '',
-        price: 10,
-        quantity: 56,
-      },
-      {
-        id: '1',
-        name: 'produit n°2',
-        description: '',
-        category: '',
-        price: 12,
-        quantity: 254,
-      },
-      {
-        id: '2',
-        name: 'produit n°3',
-        description: '',
-        category: '',
-        price: 16,
-        quantity: 328,
-      },
-    ];
+    this.products$ = this.productService.getProducts().pipe(
+      map(data => data.sort((a,b)=>a.quantity - b.quantity))
+    )
   }
-
-  // les datats seront du genre
-  // products$ ! : Observable<Product[]>
 }

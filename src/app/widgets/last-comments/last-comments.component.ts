@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { Comment } from '../../models/comments';
 import { User } from '../../models/user';
+import { CommentsService } from '../../services/comments.service';
 
 @Component({
   selector: 'app-last-comments',
@@ -13,28 +14,15 @@ import { User } from '../../models/user';
 export class LastCommentsComponent implements OnInit {
   comments!: { user: User; comment: Comment }[];
 
-  ngOnInit(): void {
-    this.comments = [
-      {
-        user: {
-          id: '',
-          firstname: '',
-          lastname: '',
-          imageUrl : "",
-          email: '',
-          adress: '',
-          postalCode: '',
-          city: '',
-          country: '',
-        },
+  constructor( private service : CommentsService ) {}
+  
+  
 
-        comment: {
-          id: '1234',
-          userId: '1',
-          rate: 4,
-          comment: 'string',
-        },
-      },
-    ];
+  ngOnInit(): void {
+  
+
+
+    }
   }
-}
+
+

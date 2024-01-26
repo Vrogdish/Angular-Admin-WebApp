@@ -2,15 +2,15 @@
   <div class="content">
     <p>From all products</p>
     <div class="mask">
-        <div class="icon">
-            <img src="../../../assets/icons/tag_faces.png" alt="likes">
-        </div>
-      <div class="circle" [ngStyle]="{'transform':rotateStyle}"></div>
+      <div class="icon">
+        <img src="../../../assets/icons/tag_faces.png" alt="likes" />
+      </div>
+      <div *ngIf="rotateStyle$ |async as rotate" class="circle" [ngStyle]="{ transform: rotate }"></div>
     </div>
     <div class="result-card">
-      <div class="data">
+      <div class="data" *ngIf="rate$ | async as rate">
         <p>0%</p>
-        <p class="score">{{rate}}%</p>
+        <p class="score">{{ rate }}%</p>
         <p>100%</p>
       </div>
       <p>Based on likes</p>

@@ -9,16 +9,16 @@
         <th class="center">Amount</th>
         <th class="center">Status</th>
       </thead>
-      <tbody>
+      <tbody *ngIf="orders$ |async as orders">
         <tr *ngFor="let order of orders">
           <td>
             {{ order.id }}
           </td>
           <td>
-            {{ order.date | date : "dd/MM/yyyy" }}
+            {{ order.createdAt | date : "dd/MM/yyyy" }}
           </td>
           <td>
-            {{ order.user }}
+            {{ getUser(order) | async }}
           </td>
           <td class="center">
             {{ order.amount | currency : 'EUR' }}
