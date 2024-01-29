@@ -1,26 +1,73 @@
 <div class="product-card">
   <div class="title">
-    <p><span class="text-gray">Réf : </span>{{ product.id }}</p>
-    <p><span class="text-gray">Name : </span>{{ product.name }}</p>
+    <div>
+      <p class="text-gray">Réf :</p>
+      <p>{{ product.id }}</p>
+    </div>
+    <div>
+      <p class="text-gray">Name :</p>
+      <p *ngIf="!editorMode">{{ product.name }}</p>
+      <div *ngIf="editorMode">
+        <input type="text" value="{{ product.name }}" />
+      </div>
+    </div>
   </div>
-  <p><span class="text-gray">Category : </span>{{ product.category }}</p>
+  <div class="category">
+    <p class="text-gray">Category :</p>
+    <p *ngIf="!editorMode">{{ product.category }}</p>
+    <select *ngIf="editorMode">
+      <option value="other">other</option>
+    </select>
+  </div>
   <div class="content">
     <div class="picture">
-      <img src="{{product.imageUrl}}" alt="{{ product.name }}" />
+      <img src="{{ product.imageUrl }}" alt="{{ product.name }}" />
+      <div *ngIf="editorMode" class="file">
+        <label for="file">Choose a new file ...</label>
+        <input type="file" name="file" id="file" />
+      </div>
     </div>
     <div class="text">
       <div>
         <p class="description text-gray">Description :</p>
-        <p>{{ product.description }}</p>
+        <p *ngIf="!editorMode">{{ product.description }}</p>
+        <textarea
+          *ngIf="editorMode"
+          type="text"
+          value="{{ product.description }}"
+        ></textarea>
       </div>
       <div class="bottom">
-        <p>
-          <span class="text-gray">Price : </span
-          >{{ product.price | currency : "EUR" }}
-        </p>
-        <p><span class="text-gray">Quantity : </span><span [ngClass]="product.quantity < 100 ? 'alert' : null">{{ product.quantity }}</span></p>
-        <div class="edit-btn">Edit</div>
-        <div class = "delete-btn">Delete</div>
+        <div>
+          <p class="text-gray">Price :</p>
+          <p *ngIf="!editorMode">{{ product.price | currency : "EUR" }}</p>
+          <input *ngIf="editorMode" type="number" value="{{ product.price }}" />
+        </div>
+        <div>
+          <p class="text-gray">Quantity :</p>
+          <p
+            *ngIf="!editorMode"
+            [ngClass]="product.quantity < 100 ? 'alert' : null"
+          >
+            {{ product.quantity }}
+          </p>
+          <input
+            *ngIf="editorMode"
+            type="number"
+            value="{{ product.quantity }}"
+          />
+        </div>
+
+        <div *ngIf="!editorMode" class="edit-btn" (click)="edit()">
+          <img src="../../../assets/icons/edit.png" alt="edit" />Edit
+        </div>
+        <div *ngIf="!editorMode" class="delete-btn" (click)="handleDelete()">
+          <img src="../../../assets/icons/delete.png" alt="delete" /> Delete
+        </div>
+        <div *ngIf="editorMode" class="cancel-btn" (click)="edit()">Cancel</div>
+        <div *ngIf="editorMode" class="confirm-btn" (click)="handleSubmit()">
+          confirm
+        </div>
       </div>
     </div>
   </div>

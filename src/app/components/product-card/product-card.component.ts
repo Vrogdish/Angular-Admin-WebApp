@@ -11,7 +11,18 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductCardComponent {
   @Input() product ! : Products
+  editorMode = false
 
 
-  
+  edit() {
+    this.editorMode === false ? this.editorMode = true : this.editorMode = false
+  }
+
+  handleSubmit() {
+   confirm("are you sure") ? this.edit() : null
+  }
+
+  handleDelete() {
+    confirm("are you sure")
+  }
 }
