@@ -1,3 +1,16 @@
-<app-card>
-    test
-</app-card>
+<div class="products">
+  <div class="title">
+    <h2>List of products :</h2>
+    <div class="searchbar">
+      <input type="text" />
+      <button type="submit" class="submit-btn">
+        <img src="../../../assets/icons/search.png" alt="search" />
+      </button>
+    </div>
+  </div>
+  <div class="add-btn"><img src="../../../assets/icons/add.png" alt="add a product"><span> Add a new product</span></div>
+  <app-product-card
+    *ngFor="let product of products$ | async"
+    [product]="product"
+  />
+</div>

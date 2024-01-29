@@ -13,18 +13,19 @@
 }
 
 .background {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: contrast(1.3) brightness(0.8);
 }
 
 .link {
-    color: white;
-    margin-top: 140px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  color: white;
+  margin-top: 140px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }

@@ -1,4 +1,4 @@
-<app-card title="Last Comments">
+<app-card title="Last Comments" link="/comments">
   <div *ngIf="comments$ | async as comments">
     <p>the fours last comments</p>
     <table>
@@ -21,7 +21,7 @@
             <img class="star"
               *ngFor="let rate of rating"
               src="{{
-                rate < comment.rate
+                rate < comment.rate +1
                   ? '../assets/icons/star-yellow.png'
                   : '../assets/icons/star-gray.png'
               }}"

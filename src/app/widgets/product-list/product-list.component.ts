@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { Observable, map, tap } from 'rxjs';
 import { Products } from '../../models/product';
 import { ProductsService } from '../../services/products.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CardComponent, CommonModule],
+  imports: [CardComponent, CommonModule,RouterLink],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss',
 })

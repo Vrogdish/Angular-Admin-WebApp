@@ -25,7 +25,7 @@ export const comments : Comment [] = [
     {
         id: "3",
         userId: "4",
-        rate: 4,
+        rate: 3,
         comment: "Le livreur s'est trompé d'adresse ...",
         createdAt: new Date("2023-12-26")
     }

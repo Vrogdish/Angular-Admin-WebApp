@@ -33,7 +33,11 @@ links = [
   imageUrl : "../../../assets/icons/money.png",
   path : "/orders"
 },
+{
+  title : "comments",
+  imageUrl : "../../../assets/icons/comment.png",
+  path : "/comments"
+},
 ]
-
 
 }

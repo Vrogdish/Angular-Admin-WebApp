@@ -1,0 +1,27 @@
+<div class="product-card">
+  <div class="title">
+    <p><span class="text-gray">Réf : </span>{{ product.id }}</p>
+    <p><span class="text-gray">Name : </span>{{ product.name }}</p>
+  </div>
+  <p><span class="text-gray">Category : </span>{{ product.category }}</p>
+  <div class="content">
+    <div class="picture">
+      <img src="{{product.imageUrl}}" alt="{{ product.name }}" />
+    </div>
+    <div class="text">
+      <div>
+        <p class="description text-gray">Description :</p>
+        <p>{{ product.description }}</p>
+      </div>
+      <div class="bottom">
+        <p>
+          <span class="text-gray">Price : </span
+          >{{ product.price | currency : "EUR" }}
+        </p>
+        <p><span class="text-gray">Quantity : </span><span [ngClass]="product.quantity < 100 ? 'alert' : null">{{ product.quantity }}</span></p>
+        <div class="edit-btn">Edit</div>
+        <div class = "delete-btn">Delete</div>
+      </div>
+    </div>
+  </div>
+</div>
