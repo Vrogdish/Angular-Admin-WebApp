@@ -4,9 +4,9 @@
     <table>
       <thead>
         <th>Photo</th>
-        <th>Firstname</th>
+        <th class="desktop-only">Firstname</th>
         <th>Date</th>
-        <th>Comment</th>
+        <th class="desktop-only">Comment</th>
         <th>Rating</th>
       </thead>
       <tbody>
@@ -14,9 +14,9 @@
           <td>
             <img src="{{ getUserImage(comment) | async }}" alt="profil" />
           </td>
-          <td>{{ getUsername(comment) | async }}</td>
+          <td class="desktop-only">{{ getUsername(comment) | async }}</td>
           <td>{{ comment.createdAt | date }}</td>
-          <td>{{ comment.comment }}</td>
+          <td class="desktop-only">{{ comment.comment }}</td>
           <td>
             <img class="star"
               *ngFor="let rate of rating"

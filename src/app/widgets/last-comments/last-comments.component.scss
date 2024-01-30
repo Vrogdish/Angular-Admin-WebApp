@@ -22,3 +22,15 @@ p, thead {
     width: 30px;
     height: 30px;
 }
+
+
+@media (max-width : 768px) {
+    .desktop-only {
+        display : none
+    }
+
+    .star {
+        width: 12px;
+        height: 12px;
+    }
+}

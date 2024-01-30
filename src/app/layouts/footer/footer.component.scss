@@ -3,4 +3,11 @@ footer {
     justify-content: space-between;
     padding: 40px;    
     font-size: 12px;
+    gap: 20px;
+}
+
+@media (max-width : 768px) {
+    footer {
+       flex-direction: column; 
+    }
 }

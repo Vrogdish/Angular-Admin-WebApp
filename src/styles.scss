@@ -40,3 +40,9 @@ h3 {
   font-weight: 400;
   color : $color-text-gray
 }
+
+@media (max-width : 768px) {
+  main {
+      padding: 0;
+  }
+}

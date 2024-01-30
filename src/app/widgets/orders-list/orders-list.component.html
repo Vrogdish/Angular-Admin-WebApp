@@ -3,21 +3,21 @@
     <p class="subtitle">List of last orders</p>
     <table>
       <thead>
-        <th>Reference</th>
+        <th class="desktop-only">Reference</th>
         <th>Date</th>
-        <th>Username</th>
+        <th class="desktop-only">Username</th>
         <th class="center">Amount</th>
         <th class="center">Status</th>
       </thead>
       <tbody *ngIf="orders$ |async as orders">
         <tr *ngFor="let order of orders">
-          <td>
+          <td class="desktop-only">
             {{ order.id }}
           </td>
           <td>
             {{ order.createdAt | date : "dd/MM/yyyy" }}
           </td>
-          <td>
+          <td class="desktop-only">
             {{ getUser(order) | async }}
           </td>
           <td class="center">
