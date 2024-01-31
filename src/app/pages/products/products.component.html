@@ -8,7 +8,8 @@
       </button>
     </div>
   </div>
-  <div class="add-btn"><img src="../../../assets/icons/add.png" alt="add a product"><span> Add a new product</span></div>
+  <div class="add-btn" (click)="createProduct()"><img src="../../../assets/icons/add.png" alt="add a product"><span> Add a new product</span></div>
+  <app-add-product-card *ngIf="creatingMode" [closeAddCard]="closeAddCard()"/>
   <app-product-card
     *ngFor="let product of products$ | async"
     [product]="product"

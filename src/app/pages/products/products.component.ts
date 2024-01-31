@@ -5,16 +5,18 @@ import { Observable, map } from 'rxjs';
 import { Products } from '../../models/product';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
+import { AddProductCardComponent } from '../../components/add-product-card/add-product-card.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CardComponent, CommonModule, ProductCardComponent],
+  imports: [CardComponent, CommonModule, ProductCardComponent,AddProductCardComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
 export class ProductsComponent implements OnInit {
   products$!: Observable<Products[]>;
+  creatingMode = false
 
   constructor(private productService: ProductsService) {}
 
@@ -23,4 +25,12 @@ export class ProductsComponent implements OnInit {
       .getProducts()
       .pipe(map((data) => data.sort((a, b) => a.quantity - b.quantity)));
   }
+
+createProduct() {
+  this.creatingMode = true
+}
+
+closeAddCard(){
+  this.creatingMode = false
+}
 }

@@ -1,0 +1,51 @@
+<div class="product-card">
+  <div class="title">
+    <div>
+      <p class="text-gray">Réf :</p>
+      <p>xxx</p>
+    </div>
+    <div>
+      <p class="text-gray">Name :</p>
+      <div>
+        <input type="text" />
+      </div>
+    </div>
+  </div>
+  <div class="category">
+    <p class="text-gray">Category :</p>
+
+    <select>
+      <option value="other">other</option>
+    </select>
+  </div>
+  <div class="content">
+    <div class="picture">
+      <div class="file">
+        <label for="file">Choose a new file ...</label>
+        <input type="file" name="file" id="file" />
+      </div>
+    </div>
+    <div class="text">
+      <div>
+        <p class="description text-gray">Description :</p>
+
+        <textarea type="text"></textarea>
+      </div>
+      <div class="bottom">
+        <div>
+          <p class="text-gray">Price :</p>
+
+          <input type="number" />
+        </div>
+        <div>
+          <p class="text-gray">Quantity :</p>
+
+          <input type="number" />
+        </div>
+
+        <div class="cancel-btn" (click)="closeAddCard">Cancel</div>
+        <div class="confirm-btn"(click)="handleSubmit()">confirm</div>
+      </div>
+    </div>
+  </div>
+</div>
