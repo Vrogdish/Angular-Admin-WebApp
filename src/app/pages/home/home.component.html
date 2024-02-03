@@ -5,10 +5,20 @@
   <app-todays-orders />
 </div>
 <div class="grid">
-  <app-welcome class="welcome"/>
-  <app-satisfaction class="satisfaction"/>
-  <app-last-users class="last-users"/>
-  <app-product-list class="products"/>
-  <app-orders-list class="orders"/>
-  <app-last-comments class="comments"/>
+  <app-welcome class="welcome" />
+  <a routerLink="/comments" class="link satisfaction">
+    <app-satisfaction />
+  </a>
+  <a routerLink="/users" class="link last-users">
+    <app-last-users />
+  </a>
+  <a routerLink="/products" class="link products">
+    <app-product-list />
+  </a>
+  <a routerLink="/orders" class="link orders">
+    <app-orders-list />
+  </a>
+  <a routerLink="/comments" class="link comments">
+    <app-last-comments />
+  </a>
 </div>

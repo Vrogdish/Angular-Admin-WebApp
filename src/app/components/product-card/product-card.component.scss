@@ -26,7 +26,7 @@ p {
   display: flex;
   height: 40px;
   & :nth-child(1) {
-    width: 250px;
+    width: 150px;
   }
 }
 
@@ -67,6 +67,7 @@ p {
 
 .category {
   height: 40px;
+  margin-bottom: 20px;
 }
 
 .text {
@@ -81,9 +82,8 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
-  & > * {
-    width: 33%;
-  }
+margin: 20px 0;
+  
 }
 
 .description {
@@ -104,6 +104,7 @@ p {
 .delete-btn,
 .cancel-btn,
 .confirm-btn {
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +125,13 @@ p {
     -moz-box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.2);
   }
+}
+
+.container {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .edit-btn {
@@ -157,4 +165,31 @@ textarea {
 
 select {
   padding: 5px;
+}
+
+
+@media (max-width : 1024px) {
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+}
+
+@media (max-width : 768px) {
+  .product-card {
+    border-radius: 0;
+  }
+
+
+
+ .bottom {
+  flex-direction: column;
+ }
+
+ .container {
+  width: 100%;
+ }
 }

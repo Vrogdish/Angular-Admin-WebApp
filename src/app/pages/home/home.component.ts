@@ -10,6 +10,7 @@ import { TodaysOrdersComponent } from '../../widgets/todays-orders/todays-orders
 import { LastUsersComponent } from '../../widgets/last-users/last-users.component';
 import { OrdersListComponent } from '../../widgets/orders-list/orders-list.component';
 import { LastCommentsComponent } from '../../widgets/last-comments/last-comments.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,8 @@ import { LastCommentsComponent } from '../../widgets/last-comments/last-comments
     TodaysOrdersComponent,
     LastUsersComponent,
     OrdersListComponent,
-    LastCommentsComponent
+    LastCommentsComponent,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

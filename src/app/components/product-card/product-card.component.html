@@ -38,35 +38,44 @@
         ></textarea>
       </div>
       <div class="bottom">
-        <div>
-          <p class="text-gray">Price :</p>
-          <p *ngIf="!editorMode">{{ product.price | currency : "EUR" }}</p>
-          <input *ngIf="editorMode" type="number" value="{{ product.price }}" />
+        <div class="container">
+          <div>
+            <p class="text-gray">Price :</p>
+            <p *ngIf="!editorMode">{{ product.price | currency : "EUR" }}</p>
+            <input
+              *ngIf="editorMode"
+              type="number"
+              value="{{ product.price }}"
+            />
+          </div>
+          <div>
+            <p class="text-gray">Quantity :</p>
+            <p
+              *ngIf="!editorMode"
+              [ngClass]="product.quantity < 100 ? 'alert' : null"
+            >
+              {{ product.quantity }}
+            </p>
+            <input
+              *ngIf="editorMode"
+              type="number"
+              value="{{ product.quantity }}"
+            />
+          </div>
         </div>
-        <div>
-          <p class="text-gray">Quantity :</p>
-          <p
-            *ngIf="!editorMode"
-            [ngClass]="product.quantity < 100 ? 'alert' : null"
-          >
-            {{ product.quantity }}
-          </p>
-          <input
-            *ngIf="editorMode"
-            type="number"
-            value="{{ product.quantity }}"
-          />
-        </div>
-
-        <div *ngIf="!editorMode" class="edit-btn" (click)="edit()">
-          <img src="../../../assets/icons/edit.png" alt="edit" />Edit
-        </div>
-        <div *ngIf="!editorMode" class="delete-btn" (click)="handleDelete()">
-          <img src="../../../assets/icons/delete.png" alt="delete" /> Delete
-        </div>
-        <div *ngIf="editorMode" class="cancel-btn" (click)="edit()">Cancel</div>
-        <div *ngIf="editorMode" class="confirm-btn" (click)="handleSubmit()">
-          confirm
+        <div class="container">
+          <div *ngIf="!editorMode" class="edit-btn" (click)="edit()">
+            <img src="../../../assets/icons/edit.png" alt="edit" />Edit
+          </div>
+          <div *ngIf="!editorMode" class="delete-btn" (click)="handleDelete()">
+            <img src="../../../assets/icons/delete.png" alt="delete" /> Delete
+          </div>
+          <div *ngIf="editorMode" class="cancel-btn" (click)="edit()">
+            Cancel
+          </div>
+          <div *ngIf="editorMode" class="confirm-btn" (click)="handleSubmit()">
+            confirm
+          </div>
         </div>
       </div>
     </div>

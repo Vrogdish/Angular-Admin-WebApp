@@ -14,7 +14,7 @@ export class ProductsService {
     return new Observable<Products[]>((observer) => observer.next(products));
   }
 
-  
+  // fonction à définir suivant l API utilisée
   updateProduct(productId : string) {
     alert("Sorry, impossible to modify in this demo")
   }
@@ -28,7 +28,4 @@ export class ProductsService {
 }
 
 
-// getProductbyID()
-// addProducts()
-// updateProduct()
-// deleteProduct()
+
