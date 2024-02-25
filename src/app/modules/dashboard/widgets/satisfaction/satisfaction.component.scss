@@ -1,0 +1,66 @@
+@import "../../../../styles/variables.scss";
+
+.content {
+  color: $color-text-gray;
+}
+
+.mask {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+}
+
+.icon {
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px ;
+    height: 48px;
+    background: $color-primary;
+    border-radius: 50%;
+    
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: solid 10px $color-primary;
+  border-left: solid 10px $color-primary;
+  border-right: solid 10px $color-secondary;
+  border-bottom: solid 10px $color-secondary;
+  // 0% : -135° / 100% : 45°
+//   transform: rotate(20deg);
+}
+
+.result-card {
+  border-radius: 20px;
+  background: linear-gradient(
+    127deg,
+    rgba(6, 11, 40, 0.74) 28.26%,
+    rgba(10, 14, 35, 0.71) 91.2%
+  );
+
+  backdrop-filter: blur(60px);
+  width: 300px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  & .data {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .score {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+  }
+}

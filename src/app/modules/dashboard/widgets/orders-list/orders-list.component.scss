@@ -1,0 +1,53 @@
+@import "../../../../styles/variables.scss";
+
+.subtitle,
+thead {
+  color: $color-text-gray;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+td {
+  border-top: solid 1px $color-text-gray;
+  padding: 20px 0;
+}
+
+th {
+  padding: 20px 0;
+}
+
+.new {
+  display: block;
+  font-weight: 700;
+  padding: 5px;
+  background: $color-green;
+  text-align: center;
+  width: 80px;
+  margin: auto;
+}
+
+.send {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  & img {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+@media (max-width : 768px) {
+  .desktop-only {
+      display: none;
+  }
+}

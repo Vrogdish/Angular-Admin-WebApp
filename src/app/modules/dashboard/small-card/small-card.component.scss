@@ -1,0 +1,39 @@
+@import "../../../styles/variables.scss";
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .result {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    align-items: end;
+  }
+
+  & .amout {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  & .balance {
+    font-size: 14px;
+    font-weight: 700;
+    color : #01B574
+  }
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: $color-primary;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+}

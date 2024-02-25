@@ -1,0 +1,41 @@
+<app-card title="List of all users">
+  <div *ngIf="users$ | async as users" class="content">
+    <div *ngFor="let user of users">
+      <div class="separate"></div>
+
+      <div class="user">
+        <img
+          src="{{ user.imageUrl }}"
+          alt="{{ user.firstname }}"
+          class="profil-img"
+        />
+        <div class="name">
+          <p>{{ user.firstname }} {{ user.lastname }}</p>
+          <p>{{ user.email }}</p>
+        </div>
+        <div class="uid">
+          <p>User Id :</p>
+          <p>{{ user.id }}</p>
+        </div>
+        <div class="adress">
+          <p>{{ user.adress }}</p>
+          <p>{{ user.postalCode }} - {{ user.city }}</p>
+        </div>
+        <p class="country">{{ user.country }}</p>
+        <div class="date">
+          <p>Member since :</p>
+          <p>
+            {{ user.createdAt | date }}
+          </p>
+        </div>
+        <p class="show">Show more...</p>
+        <img
+          src="../../../assets/icons/delete-red.png"
+          alt="delete"
+          class="delete-btn"
+          (click)="deleteUser(user.id)"
+        />
+      </div>
+    </div>
+  </div>
+</app-card>

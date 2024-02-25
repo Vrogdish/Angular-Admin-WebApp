@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    color: $color-text-gray ;
+}
+
+.signin {
+ display: flex;
+ gap: 5px;
+ align-items: center;
+    & p {
+        margin-bottom: 2px;;
+    }
+}

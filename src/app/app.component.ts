@@ -1,10 +1,10 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './layouts/header/header.component';
-import { SidebarComponent } from './layouts/sidebar/sidebar.component';
-import { FooterComponent } from './layouts/footer/footer.component';
-import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
+import { HeaderComponent } from './core/header/header.component';
+import { SidebarComponent } from './core/sidebar/sidebar.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { BurgerMenuComponent } from './core/header/burger-menu/burger-menu.component';
 
 
 
