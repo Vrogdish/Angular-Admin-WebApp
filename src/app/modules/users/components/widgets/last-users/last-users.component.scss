@@ -1,0 +1,17 @@
+@import "../../../../../styles/variables.scss";
+
+.subtitle {
+ color: $color-text-gray ;
+}
+
+ul {
+    margin-top: 40px;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    margin: 20px 0;
+    align-items: center;
+    
+}

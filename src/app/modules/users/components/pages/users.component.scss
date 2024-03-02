@@ -1,0 +1,46 @@
+@import "../../../../styles/variables.scss";
+
+
+.content {
+    margin-top: 60px;
+}
+.user {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.separate {
+ width: 100%;
+ height: 2px;
+ background: $color-text-gray;
+}
+
+.name {
+    width: 20%;
+}
+
+.uid {
+    width: 10%;
+}
+
+.adress {
+    width: 20%;
+}
+
+.country {
+    width: 10%;
+}
+
+.delete-btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.show {
+    cursor: pointer;
+}
