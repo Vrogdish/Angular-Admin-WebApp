@@ -1,6 +1,6 @@
-import { User } from '../../shared/models/user';
+import { GlobalUserInterface } from '../interfaces/global-user.interface';
 
-export const users: User[] = [
+export const users: GlobalUserInterface[] = [
   {
     id: '1',
     firstname: 'Cédric',

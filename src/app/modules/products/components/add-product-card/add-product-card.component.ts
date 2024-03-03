@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ProductsService } from '../../../../core/services/products.service';
+import { GlobalProductsService} from '../../../../core/services/global-products.service';
 
 @Component({
   selector: 'app-add-product-card',
@@ -11,7 +11,7 @@ import { ProductsService } from '../../../../core/services/products.service';
 export class AddProductCardComponent {
   @Input() closeAddCard!: void;
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: GlobalProductsService) {}
 
   handleSubmit() {
     this.productService.addProduct();

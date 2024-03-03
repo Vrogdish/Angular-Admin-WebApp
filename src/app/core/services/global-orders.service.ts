@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { orders } from '../mocks/mocks-orders';
-import { Order } from '../../shared/models/order';
+import { GlobalOrderInterface } from '../interfaces/global-order.interface';
 
 @Injectable({
   providedIn: 'root',
 })
-export class OrdersService {
+export class GlobalOrdersService {
   constructor() {}
 
-  getOrders(): Observable<Order[]> {
-    return new Observable((observer) => observer.next(orders));
+  getOrders(): Observable<GlobalOrderInterface[]> {
+    return of(orders);
   }
 
   setStatus(orderId: string, status: 'running' | 'send') {

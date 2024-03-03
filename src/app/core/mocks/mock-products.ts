@@ -1,6 +1,6 @@
-import { Products } from '../../shared/models/product';
+import { GlobalProductInterface } from "../interfaces/global-product.interface";
 
-export const products: Products[] = [
+export const products: GlobalProductInterface[] = [
   {
     id: '0001',
     name: 'my product n°1',

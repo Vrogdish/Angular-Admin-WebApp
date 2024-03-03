@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Products } from '../../shared/models/product';
+import { Observable, of } from 'rxjs';
 import { products } from '../mocks/mock-products';
+import { GlobalProductInterface } from '../interfaces/global-product.interface';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductsService {
+export class GlobalProductsService {
   constructor() {}
 
   // on crée un observable pour simuler un http get
-  getProducts(): Observable<Products[]> {
-    return new Observable<Products[]>((observer) => observer.next(products));
+  getProducts(): Observable<GlobalProductInterface[]> {
+    return of(products);
   }
 
   // fonction à définir suivant l API utilisée

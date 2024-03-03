@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdersService } from '../../../../core/services/orders.service';
-import { Order } from '../../../../shared/models/order';
-import { Observable } from 'rxjs';
 import { CardComponent } from '../../../../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { OrderInterface } from '../../interfaces/order.interface';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-orders',
@@ -13,15 +12,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './orders.component.scss',
 })
 export class OrdersComponent implements OnInit {
-  orders$!: Observable<Order[]>;
+  orders!: OrderInterface[];
 
   constructor(private orderService: OrdersService) {}
 
   ngOnInit(): void {
-    this.orders$ = this.orderService.getOrders();
-  }
-
-  changeStatus(status: 'running' | 'send', orderId: string) {
-    this.orderService.setStatus(orderId, status);
+    this.orderService.getOrders().subscribe((orders) => {
+      this.orders = orders;
+    });
   }
 }

@@ -1,26 +1,26 @@
 .layout {
-    display: flex;
+  display: flex;
 }
 
 .burger-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 20px;
 }
 
 .mainboard {
-    width: 100%;
+  width: 100%;
 }
 
 
-@media (max-width : 1280px) {
-    .sidebar {
-      display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
+@media (max-width: 1280px) {
+  .sidebar {
+    display: none;
   }
+
+  .burger-menu {
+    display: flex;
+  }
+}

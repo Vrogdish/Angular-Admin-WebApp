@@ -1,4 +1,4 @@
-export interface User {
+export interface GlobalUserInterface {
     id : string
     firstname : string
     lastname : string

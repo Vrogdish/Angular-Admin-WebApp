@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../../../../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
-import { CommentsService } from '../../../../../core/services/comments.service';
+
 import { Observable, map } from 'rxjs';
+import { CommentsService } from '../../../services/comments.service';
 
 @Component({
   selector: 'app-satisfaction',

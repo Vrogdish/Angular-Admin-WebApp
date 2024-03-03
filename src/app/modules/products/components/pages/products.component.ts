@@ -1,29 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { CardComponent } from '../../../../shared/components/card/card.component';
-import { ProductsService } from '../../../../core/services/products.service';
 import { Observable, map } from 'rxjs';
 import { Products } from '../../../../shared/models/product';
 import { CommonModule } from '@angular/common';
-import { ProductCardComponent } from '../product-card/product-card.component';
+import { GlobalProductsService } from '../../../../core/services/global-products.service';
 import { AddProductCardComponent } from '../add-product-card/add-product-card.component';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
   imports: [
-    CardComponent,
-    CommonModule,
-    ProductCardComponent,
-    AddProductCardComponent,
+    CommonModule, AddProductCardComponent, ProductCardComponent
   ],
-  templateUrl: './products.component.html',
+     templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
 export class ProductsComponent implements OnInit {
   products$!: Observable<Products[]>;
   creatingMode = false;
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: GlobalProductsService) {}
 
   ngOnInit(): void {
     this.products$ = this.productService

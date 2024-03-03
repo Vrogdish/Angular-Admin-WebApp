@@ -1,4 +1,4 @@
-export interface Comment {
+export interface GolbalCommentInterface {
     id : string
     userId : string
     rate : number

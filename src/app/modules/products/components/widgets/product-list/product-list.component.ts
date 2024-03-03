@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../../../../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Products } from '../../../../../shared/models/product';
-import { ProductsService } from '../../../../../core/services/products.service';
 import { RouterLink } from '@angular/router';
+import { GlobalProductsService } from '../../../../../core/services/global-products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -16,7 +16,7 @@ import { RouterLink } from '@angular/router';
 export class ProductListComponent implements OnInit {
   products$!: Observable<Products[]>;
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: GlobalProductsService) {}
 
   ngOnInit(): void {
     this.products$ = this.productService

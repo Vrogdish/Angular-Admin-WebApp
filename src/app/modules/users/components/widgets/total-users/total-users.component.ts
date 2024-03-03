@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../../../../../shared/components/card/card.component';
 import { SmallCardComponent } from '../../../../../shared/components/small-card/small-card.component';
 
 @Component({

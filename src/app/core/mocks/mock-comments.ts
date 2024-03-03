@@ -1,6 +1,6 @@
-import { Comment } from '../../shared/models/comments';
+import { GolbalCommentInterface } from "../interfaces/global-comment.interface";
 
-export const comments: Comment[] = [
+export const comments: GolbalCommentInterface[] = [
   {
     id: '0',
     userId: '1',

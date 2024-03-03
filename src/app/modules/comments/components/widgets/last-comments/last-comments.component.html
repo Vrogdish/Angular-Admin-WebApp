@@ -12,9 +12,9 @@
       <tbody>
         <tr *ngFor="let comment of comments">
           <td>
-            <img src="{{ getUserImage(comment) | async }}" alt="profil" />
+            <img src="{{comment.userImage}}" alt="profil" />
           </td>
-          <td class="desktop-only">{{ getUsername(comment) | async }}</td>
+          <td class="desktop-only">{{ comment.firstname}}</td>
           <td>{{ comment.createdAt | date }}</td>
           <td class="desktop-only">{{ comment.comment }}</td>
           <td>

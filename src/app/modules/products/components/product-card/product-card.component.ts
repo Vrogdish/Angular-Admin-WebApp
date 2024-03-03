@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Products } from '../../../../shared/models/product';
 import { CommonModule } from '@angular/common';
-import { ProductsService } from '../../../../core/services/products.service';
+import { GlobalProductsService } from '../../../../core/services/global-products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -14,7 +14,7 @@ export class ProductCardComponent {
   @Input() product!: Products;
   editorMode = false;
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: GlobalProductsService) {}
 
   edit() {
     this.editorMode === false
